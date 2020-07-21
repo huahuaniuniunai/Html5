@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+
+            // JS无参无返回值的方法
+            function show(){
+                // 显示Hello World
+                document.getElementById("content").innerHTML = "Hello World";
+            }
+
+            // JS有参无返回值的方法
+            function androidCallJs(arg){
+                // 将参数显示在id为content的控件上
+                document.getElementById("content").innerHTML = arg;
+                alert(arg);
+            }
+
+            // JS有参有返回值的方法
+            function getSum2(num1,num2){
+                    return num1+num2;
+            }
+
+            // JS有参有返回值的方法。调用原生的方法：h5用window.别名.类名里的方法名才能调用方法里面的内容，如：window.android.onSumResult();
+            function getSummation(num1,num2){
+                var result = window.android.onSumResult(num1+num2);
+                return result;
+            }
+
+    </script>
+
+    <style>
+        .input{background: coral;border: chartreuse;position: relative;top: 100px;width: 50%;
+        height: 100px;margin:0 auto;border: aqua;border-style: solid;border-width: 1px;
+
+        border-radius: calc(10px);
+
+
+        }
+        .mydiv{background: cornflowerblue;width: 100% auto; height: 200px;text-align: center;line-height: 200px;margin: 0 auto;}
+        .mybody{background: chartreuse;}
+    </style>
+
+</head>
+<body class="mybody">
+<div class="mydiv" id="content">WebView内容显示</div>
+
+<input class="input" value="创建dialog" type="button"
+       onclick="window.android.startFunction('i am come from JS')" />
+
+</body>
+</html>
