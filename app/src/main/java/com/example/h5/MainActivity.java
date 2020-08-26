@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        webView = new WebView(this);
 //        webView  = findViewById(R.id.webView);
 //        webView.getSettings().setJavaScriptEnabled(true);
-//        webView.loadUrl("https://www.baidu.com/");
+//        webView.loadUrl("http://192.168.52.94:8188/eip-ai-talk-mobile-ui/index.html#/"); // 小创机器人
 //        setContentView(webView);
 
         call_js_btn = findViewById(R.id.button);
